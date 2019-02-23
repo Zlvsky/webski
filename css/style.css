@@ -194,6 +194,17 @@ a,a:active, a:before, a:hover, a:visited {
   #menu a li {
     list-style: none;
     margin-top: 60px;
+    color: white;
+  }
+  #contact-nav {
+    margin-top: 60px;
+    color: white;
+    cursor: pointer;
+  }
+  #projects-nav {
+    margin-top: 60px;
+    color: white;
+    cursor: pointer;
   }
 .ulist {
   display: none;
@@ -545,23 +556,62 @@ h1 {
   margin-left: 5px;
 }
 #projects-div {
-  width: 80%;
-  margin-right: auto;
-  margin-left: auto;
+  clear: none;
   background-color: #191919;
-  height: 1000px;
+
+
 }
 #projects-wrap {
   margin: 0 auto;
+  height: 1000px;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  margin-right: -15px;
+  margin-left: -15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
+.project {
+  display: inline-block;
+  width: 150px;
+  height: 75px;
+  background-color: white;
+  margin-left: 50px;
+  margin-right: 50px;
+  }
+  .project-title {
+    clear:both;
+    display: block;
+    position: absolute;
+    text-align: center;
+    transform: translateY(80px);
+    color: white;
+    font-size: 30px;
+    text-align: center;
+  }
+  #projects-wrap a {
+    color: white;
+    text-decoration: none;
+  }
+@media only screen and (min-width: 709px) {
 .project {
   display: inline-block;
   width: 410px;
   height: 230px;
   background-color: white;
   margin: 70px 0 0 70px;
-
-
+  }
+  .project-title {
+    clear:both;
+    display: block;
+    position: absolute;
+    margin-left: 108.5px;
+    margin-top: 240px;
+    color: white;
+    font-size: 30px;
+  }
 }
 .project1 {
   background-image: url('../projects/marmur/images/tlo.jpg');
@@ -571,15 +621,7 @@ h1 {
   background-image: url('../projects/zadanka/zadanka.jpg');
   background-size: contain;
 }
-.project-title {
-  clear:both;
-  display: block;
-  position: absolute;
-  margin-left: 108.5px;
-  margin-top: 240px;
-  color: white;
-  font-size: 30px;
-}
+
 body {
   background-image: url('images/home3.jpeg');
 }
@@ -593,6 +635,7 @@ body {
   justify-content: center;
   align-items: center;
   display: none;
+  transition: 0.6s ease;
 }
 #bg-color {
   position: absolute;
@@ -617,7 +660,7 @@ body {
     transform: rotate(45deg);
     cursor: pointer;
   }
-  #bg-year, #bg-phone, #bg-location {
+  #bg-year, #bg-phone, #bg-mail {
     font-size: 23px;
     margin: 15px 0 15px 0;
     font-family: 'Fira Sans', sans-serif;
@@ -649,7 +692,9 @@ body {
 }
 
 
-
+#nothingTitle {
+  transform: translateY(100px);
+}
 
 @keyframes float {
   0% {

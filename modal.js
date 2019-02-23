@@ -2,6 +2,7 @@ document.getElementById('turn-modal').addEventListener('click',
 function() {
   document.querySelector('.bg-modal').style.display = 'flex';
   document.getElementById('stopScroll').style.overflow = 'hidden';
+  document.querySelector('.bg-modal').style.position = 'fixed';
 });
 
 document.querySelector('.close').addEventListener('click',

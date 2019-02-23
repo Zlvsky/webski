@@ -25,7 +25,7 @@ function scrollFunction() {
 var navi = document.getElementById('main-navigation');
 var hamburger = document.getElementById('menuToggle');
 var check = document.getElementById('myCheck');
-check.addEventListener('click', function(){
+check.addEventListener('click', function essa(){
   if (check.checked == true){
       navi.style.transform = "translateX(0)";
       navi.style.zIndex = "15";
@@ -38,6 +38,7 @@ check.addEventListener('click', function(){
       document.getElementById("navbar").style.height = "9%";
       document.getElementById("nav-wrap").style.marginTop = "8px";
       document.getElementById('stopScroll').style.overflow = 'hidden';
+
   } else {
     navi.style.transform = "translateX(-100%)";
     navi.style.zIndex = "0";
@@ -52,5 +53,25 @@ check.addEventListener('click', function(){
     document.getElementById('stopScroll').style.overflow = 'auto';
     document.getElementById('stopScroll').style.overflowX = 'hidden';
   }
-
 }, false);
+
+
+document.getElementById('contact-nav').addEventListener('click',
+function() {
+  check.checked = false;
+  navi.style.transform = "translateX(-100%)";
+  navi.style.zIndex = "0";
+   function modalTimeOut(){
+    document.querySelector('.bg-modal').style.display = 'flex';
+    document.querySelector('.bg-modal').style.position = 'fixed';
+    document.getElementById('stopScroll').style.overflow = 'hidden';
+   }
+   setTimeout(modalTimeOut, 550);
+});
+
+document.getElementById('projects-nav').addEventListener('click',
+function() {
+  check.checked = false;
+  navi.style.transform = "translateX(-100%)";
+  navi.style.zIndex = "0";
+});
