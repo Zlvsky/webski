@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Rock Paper Scissors Game</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header id="cos">
+    <h1>Rock Paper Scissors</h1>
+  </header>
+
+<div class="score-board">
+  <div id="user-label"  class="badge">user</div>
+  <div id="computer-label" class="badge">comp</div>
+  <span id="user-score">0</span>:<span id="computer-score">0</span>
+</div>
+
+<div class="result">
+  <p>Rock Paper Scissors <br> Let's play! </p>
+</div>
+
+<div class="choices">
+  <div class="choice" id="r">
+    <img src="css/rock.png" alt="rock" width="80" height="80">
+  </div>
+    <div class="choice" id="p">
+      <img src="css/paper.png" alt="paper" width="80" height="80">
+    </div>
+      <div class="choice" id="s">
+        <img src="css/scissors.png" alt="" width="80" height="80">
+      </div>
+</div>
+
+
+
+
+
+<p id="action-message">Make your move</p>
+
+<div id="end">
+		<h4> You Win! Congratulations</h4>
+			<button id="btn1" onclick="endd()">Play again</button>
+
+		</div>
+    <div id="end2">
+    		<h4> You lost! Try your luck next time</h4>
+    			<button id="btn1" onclick="endd()">Play again</button>
+
+    		</div>
+
+
+<script src="app.js" charset="utf-8"></script>
+</body>
+
+
+
+</html>

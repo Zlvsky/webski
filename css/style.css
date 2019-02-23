@@ -614,11 +614,15 @@ h1 {
   }
 }
 .project1 {
-  background-image: url('../projects/marmur/images/tlo.jpg');
+  background-image: url('../projects/giereczka/css/screen.jpg');
   background-size: cover;
 }
 .project2 {
   background-image: url('../projects/zadanka/zadanka.jpg');
+  background-size: contain;
+}
+.project3 {
+  background-image: url('../projects/zegar/screen.jpg');
   background-size: contain;
 }
 
