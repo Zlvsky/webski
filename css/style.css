@@ -9,6 +9,14 @@ body, html {
   font-family: 'Libre Franklin', sans-serif;
   scroll-behavior: smooth;
 }
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+
+}
+#home-fix {
+  color: #adadad;
+}
 #stopScroll {
   overflow: none;
 }
@@ -21,6 +29,193 @@ body, html {
   height: 100%;
 }
 /* NAVBAR */
+#navbar {
+  overflow: hidden;
+  color: black;
+  padding: 10px 10px;
+  transition: 0.4s;
+  position: fixed;
+  width: 100%;
+  height: 12%;
+  top: 0;
+  text-align: center;
+  font-size: 19px;
+  z-index: 100000;
+
+}
+#nav-wrap {
+margin-top: 30px;
+margin-left: 50px;
+transition: 0.4s;
+display: flex;
+justify-content: space-between;
+}
+#navbar a {
+  float: left;
+  text-align: center;
+  text-decoration: none;
+  font-size:19px;
+  line-height: 25px;
+  border-radius: 4px;
+}
+#logo {
+  font-size: 19px;
+  color: black;
+  transition: 0.4s;
+  display: inline;
+  float: left;
+  margin-left: -30%;
+}
+
+a,a:active, a:before, a:hover, a:visited {
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+#menuToggle
+{
+  display: block;
+  position: relative;
+
+
+  z-index: 1;
+
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+
+  cursor: pointer;
+
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+
+  -webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+
+  background: #cdcdcd;
+  border-radius: 3px;
+
+  z-index: 1;
+
+  transform-origin: 4px 0px;
+
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+/*
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: white;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+  #main-navigation {
+    position: fixed;
+    top:0;
+    width: 100%;
+    height: 100%;
+    background: #242424;
+    text-align: center;
+    transform: translateX(-100%);
+    transition: transform 0.6s ease;
+  }
+  #menu {
+    display: block;
+
+    top: 50%;
+    font-size: 40px;
+    padding-left: 0;
+    justify-content: center;
+    text-align: center;
+    margin-top: 50%;
+  }
+  #menu a {
+    text-decoration: none;
+    color: white;
+
+  }
+  #menu a li {
+    list-style: none;
+    margin-top: 60px;
+  }
+.ulist {
+  display: none;
+}
+#nav-icon {
+  width: 150px;
+  display: flex;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+}
+.nav-whip {
+  display: inline-block !important;
+  width: 40px;
+
+}
+@media only screen and (min-width: 684px) {
+
+
+  #menuToggle {
+    display: none;
+  }
 #navbar {
   overflow: hidden;
   color: black;
@@ -83,7 +278,7 @@ a,a:active, a:before, a:hover, a:visited {
   transition: color 1s;
   color: black;
 }
-@media screen and (max-width: 580px) {
+@media only screen and (min-width: 684px) {
   #navbar {
     padding: 8px 10px !important;
   }
@@ -92,14 +287,15 @@ a,a:active, a:before, a:hover, a:visited {
     display: block;
     text-align: left;
   }
+ }
 }
-
 /* END OF NAVBAR */
 /* HOME IMAGE */
 .homeImg {
   top: 0;
   background-image: url('images/home3.jpeg');
   height: 100%;
+  width: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -107,47 +303,79 @@ a,a:active, a:before, a:hover, a:visited {
   margin: 0 auto;
 }
 /* EMD OF HOME IMAGE */
-
 .center {
   position: absolute;
   display: block;
   color: black;
-  width: 37%;
+  width: 100%;
   height: 25%;
-  margin-top: 18%;
-  left: 50%;
+  bottom: 140px;
   font-size-adjust: none;
   text-align: center;
-  font-size: 200%;
+  font-size: 25px;
 }
 .title {
   display: block;
   position: absolute;
   letter-spacing: 6px;
-  font-size: 54px;
+  font-size: 40px;
   top: 10%;
   left: 5%;
 }
+
+@media only screen and (min-width: 682px) {
+  .center {
+    position: absolute;
+    display: block;
+    color: black;
+    width: 37%;
+    height: 25%;
+    margin-top: 18%;
+    left: 50%;
+    font-size-adjust: none;
+    text-align: center;
+    font-size: 200%;
+  }
+  .title {
+    display: block;
+    position: absolute;
+    letter-spacing: 6px;
+    font-size: 54px;
+    top: 10%;
+    left: 5%;
+  }
+  #more {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    margin-right: auto;
+    margin-left: auto;
+    top: 96%;
+  }
+
+}
+
 
 h3 {
   font-size: 30px;
 }
 
-#more {
-  position: relative;
-  width: 80px;
-  height: 120px;
-  margin-right: auto;
-  margin-left: auto;
-  top: 83%;
-}
 #scrolldown {
   position: relative;
   top: 89%;
 }
+#more {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  margin-right: auto;
+  margin-left: auto;
+  top: 83%;
+}
 #img-scrolldown {
   width: 60px;
   height: 60px;
+  animation: float 6s ease-in-out infinite;
 }
 /* HOME 2 */
 
@@ -418,4 +646,22 @@ body {
   position: absolute;
   bottom: 5%;
   left: 45%;
+}
+
+
+
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+
+  }
+  50% {
+
+		transform: translatey(-15px);
+	}
+	100% {
+
+		transform: translatey(0px);
+	}
 }
