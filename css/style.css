@@ -318,12 +318,14 @@ a,a:active, a:before, a:hover, a:visited {
   position: absolute;
   display: block;
   color: black;
-  width: 100%;
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
   height: 25%;
-  bottom: 140px;
+  bottom: 165px;
   font-size-adjust: none;
   text-align: center;
-  font-size: 25px;
+  font-size: 20px;
 }
 .title {
   display: block;
