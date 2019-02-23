@@ -285,7 +285,7 @@ a,a:active, a:before, a:hover, a:visited {
   text-decoration: none;
   transition: 0.4s;
 }
-#hyperlink {
+.hyperlink {
   transition: color 1s;
   color: black;
 }
@@ -666,14 +666,9 @@ body {
     font-family: 'Fira Sans', sans-serif;
     font-weight: 400;
   }
-#bg-year {
-
-}
-#bg-phone {
-
-}
-#bg-location {
-
+.list a {
+  text-decoration: none;
+  color: black;
 }
 .formm {
   display: block;
@@ -694,6 +689,12 @@ body {
 
 #nothingTitle {
   transform: translateY(100px);
+}
+
+.nothingA {
+  text-decoration: none;
+  color: black;
+  transition: 1.5s;
 }
 
 @keyframes float {
