@@ -568,6 +568,10 @@ h1 {
   width: 100%;
   height: 200px;
   background-color: white;
+
+  }
+  .project-pad {
+    padding-top: 40px;
   }
   .project-title {
 
