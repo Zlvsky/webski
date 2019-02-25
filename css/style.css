@@ -582,25 +582,6 @@ h1 {
     color: white;
     text-decoration: none;
   }
-.project1 {
-  background-image: url('../projects/giereczka/css/screen.jpg');
-  background-size: cover;
-  background-position: center;
-
-}
-.project2 {
-  background-image: url('../projects/zadanka/zadanka.jpg');
-  background-size: contain;
-  background-position: center;
-
-}
-.project3 {
-  background-image: url('../projects/zegar/css/screen.jpg');
-  background-size: contain;
-  background-position: center;
-
-}
-
 body {
   background-image: url('images/home3.jpeg');
 }
