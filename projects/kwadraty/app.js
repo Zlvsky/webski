@@ -1,5 +1,5 @@
 var health = 3,
-    speed = 1800,
+    speed = 1900,
     counter = 0,
     timeleft = 50;
 
