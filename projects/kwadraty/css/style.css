@@ -39,12 +39,12 @@ body {
 /* GAME */
 #game {
   position: absolute;
-  width: 370px;
-  height:600px;
+  width: 340px;
+  height:560px;
   left: 50%;
   top: 50%;
-  margin-left: -185px;
-  margin-top: -300px;
+  margin-left: -170px;
+  margin-top: -280px;
   background: #242424;
   display: block;
   border: 1px white solid;
@@ -55,7 +55,8 @@ body {
   width: 80px;
   height: 80px;
   border: 2px white solid;
-  margin: 20px;
+  margin: 15px;
+
   cursor: pointer;
 }
 .good {
@@ -82,8 +83,8 @@ body {
   background-color: rgba(0, 0, 0, 0.7);
 }
 .modal-content {
-  width: 370px;
-  height: 600px;
+  width: 340px;
+  height: 560px;
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 6px;
   text-align: center;
