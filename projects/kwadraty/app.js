@@ -19,48 +19,58 @@ function healthDiv() {
     document.getElementById('health1').style.display = 'none'
   }
 }
-
-
-
 // WYGRANA
 function gameWin() {
   if (counter >= 50 && health > 0) {
     modal.style.display = 'flex';
     end.textContent = 'You Win! Congratulations!';
     clearInterval(timek);
+    clearInterval(timek2);
     clearTimeout(counterTime);
     btn.addEventListener('click', function(){ document.location.reload(true)}, false);
   }
 }
-
 // ZAKONCZENIE GRY PRZEGRANA
 function gameEnd() {
   if(health <= 0) {
     modal.style.display = 'flex';
     end.textContent = 'You lost;( Try again';
     clearInterval(timek);
+    clearInterval(timek2);
     clearTimeout(counterTime);
     btn.addEventListener('click', function(){ document.location.reload(true)}, false);
   } else if (counter >= 50) {
     modal.style.display = 'flex';
     end.textContent = 'You lost;( Try again';
     clearInterval(timek);
+    clearInterval(timek2);
     clearTimeout(counterTime);
     btn.addEventListener('click', function(){ document.location.reload(true)}, false);
   }
 }
+// POJAWIENIE SIE CZERWONYCH
+function showRed() {
+  random2 = Math.floor(Math.random() * divs);
+  if(random2 != random) {
+    $('.squares').eq(random2).addClass('bad');
+    red();
+  }
+}
 // POJAWIANIE SIE ZIELONYCH
 function showGreen() {
-
    random = Math.floor(Math.random() * divs);
+   if (!$(random).hasClass('bad')) {
   $('.squares').eq(random).addClass('good');
 green();
 }
+}
+
 
 // START GIERECZKI
 function gameStart() {
 // POJAWIANIE SIE ZIELONYCH
 showGreen();
+timek2 = setInterval('showRed()', speed);
 modal.style.display = 'none';
 
 // TIMER CONVERT MINUTES
@@ -98,6 +108,7 @@ healthDiv();
 console.log('Zostalo Ci: ' + health + ' życ');
 $('.squares').removeClass('good');
 timek = setTimeout('showGreen()', speed);
+
 if(health <= 0) {
 console.log('Przegrales');
   gameEnd();
@@ -116,6 +127,13 @@ if($('.squares').hasClass('good')) {
   timek = setTimeout( 'healthDown()', speed);
 }
 }
+// CO SIE DZIEJE JAK SIE ZAPALI CZERWONE
+function red() {
+if($('.squares').hasClass('bad')) {
+  setTimeout( 'removeRed()', speed);
+}
+}
+
 
 // USUWANIE NA KLIKNIECIE ZIELONEGO
 function essa(id) {
@@ -125,6 +143,7 @@ function essa(id) {
     console.log(';D');
     speed -= 50;
     setTimeout('showGreen()', speed);
+
   } else {
     health = health - 1;
     healthDiv();
