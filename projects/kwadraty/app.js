@@ -1,5 +1,5 @@
 var health = 3,
-    speed = 1850,
+    speed = 1990,
     counter = 0,
     timeleft = 50,
     redSpeed = Math.floor(Math.random() * 5) + 2;
