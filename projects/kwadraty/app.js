@@ -2,7 +2,7 @@ var health = 3,
     speed = 1700,
     counter = 0,
     timeleft = 50,
-    redSpeed = Math.floor(Math.random() * 7) + 2;
+    redSpeed = Math.floor(Math.random() * 5) + 2;
 
 var divs = $('.squares').length;
 var squares = document.querySelector('.squares');
@@ -142,7 +142,7 @@ function essa(id) {
     clearTimeout(timek);
     $('.squares').removeClass('good');
     console.log(';D');
-    speed -= 50;
+    speed -= 60;
     setTimeout('showGreen()', speed);
 
   } else {
