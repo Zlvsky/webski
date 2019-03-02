@@ -1,7 +1,8 @@
 var health = 3,
-    speed = 1900,
+    speed = 1700,
     counter = 0,
-    timeleft = 50;
+    timeleft = 50,
+    redSpeed = Math.floor(Math.random() * 7) + 2;
 
 var divs = $('.squares').length;
 var squares = document.querySelector('.squares');
@@ -130,7 +131,7 @@ if($('.squares').hasClass('good')) {
 // CO SIE DZIEJE JAK SIE ZAPALI CZERWONE
 function red() {
 if($('.squares').hasClass('bad')) {
-  setTimeout( 'removeRed()', speed);
+  setTimeout( 'removeRed()', speed / redSpeed);
 }
 }
 
