@@ -142,8 +142,10 @@ function essa(id) {
     clearTimeout(timek);
     $('.squares').removeClass('good');
     console.log(';D');
-    speed -= 70;
     setTimeout('showGreen()', speed);
+    if (speed > 530) {
+      speed -= 70;
+    }
 
   } else {
     health = health - 1;
