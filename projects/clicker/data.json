@@ -1,0 +1,45 @@
+{
+   "upgrade": [
+{
+  "name": "liquid",
+  "price": 50,
+  "click": 1,
+  "jps": 0
+}, {
+  "name": "boczne",
+  "price": 300,
+  "click": 2,
+  "jps": 1
+}, {
+  "name": "zapiekanka",
+  "price": 600,
+  "click": 3,
+  "jps": 2
+}, {
+  "name": "obuwie",
+  "price": 2000,
+  "click": 5,
+  "jps": 3
+}, {
+  "name": "mpk",
+  "price": 4000,
+  "click": 7,
+  "jps": 4
+}, {
+  "name": "szatnia",
+  "price": 7500,
+  "click": 10,
+  "jps": 5
+}, {
+  "name": "chemia",
+  "price": 10000,
+  "click": 12,
+  "jps": 7
+}, {
+  "name": "upomnienie",
+  "price": 20000,
+  "click": 15,
+  "jps": 9
+}
+]
+}

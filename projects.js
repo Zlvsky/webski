@@ -30,6 +30,6 @@ function createProject(path, title) {
 };
 
 $(document).ready(createProject('giereczka', 'Rock Paper Scissors'));
-$(document).ready(createProject('zadanka', 'Exercises(F12 CONSOLE)'));
+$(document).ready(createProject('clicker', 'ZSE Clicker'));
 $(document).ready(createProject('zegar', 'Cool Ass Clock'));
 $(document).ready(createProject('kwadraty', 'Squares Game'));

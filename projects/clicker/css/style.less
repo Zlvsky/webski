@@ -1,0 +1,49 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html,
+#wrap {
+  background-color: #1b8aa2;
+  /* background-image: url(images/tlo.jpg);
+  background-position: center;
+  background-size: cover; */
+}
+#wrap {
+  position: absolute ;
+  text-align: center;
+  justify-content: center;
+  width: 100%;
+  height: 20%;
+}
+#score,
+#score::before {
+  font-size: 40px;
+}
+#score::before {
+  content: "Stan jedynek: ";
+}
+#jps,
+#jps::before {
+  font-size: 32px;
+}
+#jps::before {
+  content: "Jednyki na sekunde: ";
+}
+#totalscore,
+#totalscore::before {
+  font-size: 25px;
+}
+#totalscore::before {
+  content: "Wszystkie jedynki: ";
+}
+#clicker {
+  width: 100px;
+  height: 100px;
+}
+.upgrade {
+  width: 150px;
+  height: 150px;
+  margin-top: 30px;
+}

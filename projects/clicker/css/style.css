@@ -1,0 +1,296 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+html {
+  scroll-behavior: smooth;
+}
+html, #wrap {
+
+  background-image: url(images/tlo.jpg);
+  background-position: center;
+  background-size: cover;
+}
+/* FOR ALL DEVICES */
+#wrap {
+  position: absolute ;
+  text-align: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+#x3 {
+  width: 95%;
+  height: 5px;
+  background-color: black;
+  margin: 15px auto 15px auto;
+}
+#bar {
+  width: 0.2%;
+  height: 5px;
+  background-color: #337ea3;
+  text-align: right;
+  line-height: 5px;
+  color: white;
+  z-index: 10;
+}
+#footer {
+  position: absolute;
+  display: block;
+  bottom: 0;
+  width: 100%;
+}
+#clicker:active {
+  transform: scale(0.95);
+}
+/* END FOR ALL DEVICES */
+
+/* UI FOR PC */
+@media only screen and (min-width: 601px) {
+
+#clicker {
+  width: 400px;
+  height: 400px;
+  margin-top: 100px;
+}
+
+#scores {
+
+  background-color: rgb(0,0,0,0.4);
+  width: 65%;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid black;
+  border-top: 0px;
+}
+.bought, .bonuses {
+  display: inline-flex;
+  position: absolute;
+  top: 50%;
+}
+.bought {
+  left: 0;
+
+}
+.bonuses {
+  right: 0;
+}
+.boczneContent {
+  width: 17.5vw;
+
+}
+.arrow {
+
+
+  width: 70px;
+  height: 50px;
+  cursor: pointer;
+}
+#hello {
+  position: relative;
+  display: block;
+  top: 40px;
+  width: 494px;
+  left: 50%;
+  margin-left: -247px;
+  color: white;
+}
+h4 {
+  font-size: 2.5rem !important;
+}
+#info {
+  position: absolute;
+  right: 3%;
+  bottom: 15%;
+  color: white;
+  font-size: 17px;
+}
+/* END UI FOR PC */
+}
+
+/* UI FOR MOBILE */
+@media only screen and (max-width: 600px) {
+  #clicker {
+    width: 300px;
+    height: 300px;
+    margin-top: 50px;
+  }
+  #scores {
+    background-color: rgb(0,0,0,0.4);
+    width: 100%;
+    border: 1px solid black;
+    border-top: 0px;
+  }
+
+  .bought,.bonuses {
+    display: none;
+  }
+  #hello {
+    position: absolute;
+    display: block;
+    top: 40px;
+    width: 294px;
+    left: 50%;
+    margin-left: -147px;
+    color: white;
+  }
+  h4 {
+    font-size: 1.5rem;
+  }
+/* END FOR MOBILE */
+}
+
+/* WYNIKI */
+#scores {
+  color: white;
+}
+#score, #score::before {
+  font-size: 40px;
+}
+#score::before {
+  content: "Ilość jedynek: "
+}
+#jps, #jps::before {
+  font-size: 25px;
+}
+#jps::before {
+  content: "Jednyki na sekunde: "
+}
+#totalscore, #totalscore::before {
+  font-size: 20px;
+}
+#totalscore::before {
+  content: "Wszystkie jedynki: "
+}
+/* KONIEC WYNIKOW */
+
+
+
+
+
+/* SKLEP */
+.upgrades {
+  position: fixed;
+  height: 100%;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: rgb(0,0,0,0.7);
+  transition: transform ease-in 0.7s;
+  transform: translateY(100%);
+
+}
+
+.upgrades__header,
+.upgrades__footer {
+  height: 100px;
+}
+.upgrades__content,
+.upgrades__footer {
+  position: absolute;
+  width: 100%;
+}
+.upgrades__content {
+  bottom: 100px;
+  top: 100px;
+  overflow-y: auto;
+}
+.upgrades__footer {
+  bottom: 0;
+}
+
+/* HEADER */
+#close {
+  font-size: 75px;
+  color: white;
+  display: block;
+  position: absolute;
+  right: 10px;
+  top: 0;
+  cursor: pointer;
+  transform: rotate(45deg);
+}
+#special-items, #jps-items {
+  text-align: center;
+  color: #28a2de;
+  margin-top: 30px;
+}
+h4,h5 {
+  overflow-y: hidden;
+}
+/* END OF HEADER */
+.upgrade {
+  width: 100%;
+  height: 40px;
+  background-color: white;
+  transition-duration: 0.4s;
+  color: black;
+  border: none;
+  text-decoration: none;
+  text-align: center;
+}
+.upgrade:hover {
+  background-color: #2086b8;
+  color: white;
+}
+.upgrade:focus {
+  outline: 0;
+}
+/* CONTENT */
+.itemIcon {
+  width: 50px;
+  height: 50px;
+  float: left;
+}
+.jedynka {
+  width: 20px;
+  height: 20px;
+  float:left;
+  background-color: #337ea3;
+  overflow-y: hidden !important;
+  text-align: center;
+  animation: zagrozenie 3s infinite;
+  color: black;
+}
+.down {
+  clear: both;
+}
+p {
+  margin-bottom: 0 !important;
+}
+.upgrade-wrap {
+  border: 2px solid white;
+  color: white;
+  margin-bottom: 30px;
+}
+/* KONIEC CONTENTU */
+#shopImg {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 30px;
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+
+  background-color: transparent;
+  background-image: url(images/shop.png);
+  background-size: 70px;
+  background-position: center;
+}
+
+#shopImg:focus {
+  outline: 0;
+}
+
+/* KONIEC SKLEPU */
+@keyframes zagrozenie {
+  0% {
+    background-color: #337ea3;
+  }
+  50% {
+    background-color: white;
+  }
+  100% {
+    background-color: #337ea3;
+  }
+}

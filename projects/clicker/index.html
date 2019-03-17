@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <meta property="og:title" content="Zagraj w clickera ZSE"/>
+  <meta property="og:image" content="tlo.jpg">
+  <link rel="icon" href="css/favicon.ico">
+  <title>ZSE Clicker</title>
+</head>
+<body>
+<div id="wrap">
+  <div id="scores">
+    <div id="score">0</div>
+    <div id="jps">0</div>
+    <div id="x3"><div id="bar"></div></div>
+  <div id="totalscore">0</div>
+  <div id="comment">Zostales przyjety do najlepszego technikum na Podlasiu</div>
+  </div>
+  <img src="css/images/logo.png" alt="Kliknij" id="clicker">
+
+
+  <div id="footer">
+    <div id="info">Strona nie ma na celu wyśmiania szkoly ani obrazenia nikogo</div>
+    <div id="shop"> <button type="button" name="button" id="shopImg"></button> > </div>
+
+
+  </div>
+</div>
+
+<!--  -->
+<!-- SKLEP -->
+<div class="upgrades">
+<div class="upgrades__header">
+  <div id="hello"><h4>Witaj w sklepiku szkolnym!</h4></div>
+  <div id="upgrade-close"><span id="close">+</span></div>
+</div>
+<div class="upgrades__content">
+  <div class="container">
+          <div id="special-items"><h5>Specjalne przedmioty!</h5></div>
+  <div class="row">
+
+    <div class="col-6 col-sm-6 col-md-4 col-lg-2 col-xl-2">
+      <div class="upgrade-wrap">
+      <div class="up">
+        <img src="css/images/essa.png" alt="" class="itemIcon">
+        <p>Zagrożenie</p>
+        <div class="jedynka">1</div>
+        <span id="zagrozenieDiv">5:00</span>
+      </div>
+    <div class="down">
+      <p>Stres przez zagrożenie daje 2x więcej jedynek na kliknięcie</p>
+      <button type="button" name="button" class="upgrade" id="btnn1" >Użyj</button>
+
+    </div>
+  </div>
+</div>
+
+<div class="col-6 col-sm-6 col-md-4 col-lg-2 col-xl-2">
+  <div class="upgrade-wrap">
+    <div class="up">
+      <img src="css/images/otwarte.png" alt="" class="itemIcon">
+      <p>Dni Otwarte</p>
+      <div class="jedynka">1</div>
+      <span id="otwarte">7:00</span>
+    </div>
+    <div class="down">
+      <p>Jeżeli dni otwarte dobiegną końca, podwój ilość jedynek</p>
+      <button type="button" name="button" class="upgrade" id="btnn2">Użyj</button>
+    </div>
+  </div>
+</div>
+
+<div class="col-6 col-sm-6 col-md-4 col-lg-2 col-xl-2">
+  <div class="upgrade-wrap">
+  <div class="up">
+    <img src="css/images/miejska.png" alt="" class="itemIcon">
+    <p>Straż miejska</p>
+    <div class="jedynka">1</div>
+    <span id="miejskaCost">500000</span>
+  </div>
+<div class="down">
+  <p>Na boczne wjeżdża miejska, wszystkie jedynki x4</p>
+  <button type="button" name="button" class="upgrade" onclick='buy("miejska")'>Kup</button>
+
+</div>
+</div>
+</div>
+
+
+  </div>
+      <div id="jps-items"><h5>Przedmioty JNS!</h5></div>
+    <div class="row">
+
+      <div class="col-6 col-sm-6 col-md-4 col-lg-2 col-xl-2">
+        <div class="upgrade-wrap">
+        <div class="up">
+          <img src="css/images/liquid.png" alt="" class="itemIcon">
+          <p>Liquid</p>
+          <div class="jedynka">1</div>
+          <span id="liquidCost">50</span>
+        </div>
+      <div class="down">
+        <p>Kup i zalej nowy smaczek. Wymagane odblokowane boczne</p>
+        <p>JNS + 1</p>
+        <button type="button" name="button" class="upgrade" onclick='buy("liquid")'>Kup</button>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="col-6 col-sm-6 col-md-4 col-lg-2 col-xl-2">
+    <div class="upgrade-wrap">
+    <div class="up">
+      <img src="css/images/boczne.png" alt="" class="itemIcon">
+      <p>Boczne</p>
+      <div class="jedynka">1</div>
+      <span id="boczneCost">300</span>
+    </div>
+  <div class="down">
+    <p>Wyjdż na boczne i odblokuj kupno liquidu</p>
+    <p>JNS + 3</p>
+    <button type="button" name="button" class="upgrade" onclick='buy("boczne")'>Kup</button>
+
+  </div>
+</div>
+</div>
+
+  <div class="col-6 col-sm-6 col-md-4 col-lg-2 col-xl-2">
+    <div class="upgrade-wrap">
+    <div class="up">
+      <img src="css/images/zapiekanka.png" alt="" class="itemIcon">
+      <p>Zapiexa</p>
+      <div class="jedynka">1</div>
+      <span id="zapiekankaCost">600</span>
+    </div>
+  <div class="down">
+    <p>Zaloz zapiekanke na zeszyt, nieistniejącego ucznia</p>
+    <p>JNS + 5</p>
+    <button type="button" name="button" class="upgrade" onclick='buy("zapiekanka")'>Kup</button>
+  </div>
+  </div>
+  </div>
+
+  <div class="col-6 col-sm-6 col-md-4 col-lg-2 col-xl-2">
+    <div class="upgrade-wrap">
+    <div class="up">
+      <img src="css/images/obuwie.png" alt="" class="itemIcon">
+      <p>Obuwie</p>
+      <div class="jedynka">1</div>
+      <span id="obuwieCost">2000</span>
+    </div>
+  <div class="down">
+    <p>Zostajesz przylapany na niezmienieniu obuwia</p>
+    <p>JNS + 9</p>
+    <button type="button" name="button" class="upgrade" onclick='buy("obuwie")'>Kup</button>
+  </div>
+  </div>
+  </div>
+
+  <div class="col-6 col-sm-6 col-md-4 col-lg-2 col-xl-2">
+    <div class="upgrade-wrap">
+    <div class="up">
+      <img src="css/images/mpk.png" alt="" class="itemIcon">
+      <p>MPK 20</p>
+      <div class="jedynka">1</div>
+      <span id="mpkCost">4000</span>
+    </div>
+  <div class="down">
+    <p>Przyjeżdża legendarna dwuczlonowa 20</p>
+    <p>JNS + 15</p>
+    <button type="button" name="button" class="upgrade" onclick='buy("mpk")'>Kup</button>
+  </div>
+  </div>
+  </div>
+
+  <div class="col-6 col-sm-6 col-md-4 col-lg-2 col-xl-2">
+    <div class="upgrade-wrap">
+    <div class="up">
+      <img src="css/images/szatnia.png" alt="" class="itemIcon">
+      <p>Szatnia</p>
+      <div class="jedynka">1</div>
+      <span id="szatniaCost">7500</span>
+    </div>
+  <div class="down">
+    <p>Ty i 10 innych klas kończysz w tym samym czasie</p>
+    <p>JNS + 20</p>
+    <button type="button" name="button" class="upgrade" onclick='buy("szatnia")'>Kup</button>
+  </div>
+  </div>
+  </div>
+
+  <div class="col-6 col-sm-6 col-md-4 col-lg-2 col-xl-2">
+    <div class="upgrade-wrap">
+    <div class="up">
+      <img src="css/images/chemia.png" alt="" class="itemIcon">
+      <p>Spr. z chemii</p>
+      <div class="jedynka">1</div>
+      <span id="chemiaCost">10000</span>
+    </div>
+  <div class="down">
+    <p>Zawalasz jeden z 997 wersji sprawdzianów</p>
+    <p>JNS + 25</p>
+    <button type="button" name="button" class="upgrade" onclick='buy("chemia")'>Kup</button>
+  </div>
+  </div>
+  </div>
+
+  <div class="col-6 col-sm-6 col-md-4 col-lg-2 col-xl-2">
+    <div class="upgrade-wrap">
+    <div class="up">
+      <img src="css/images/upomnienie.png" alt="" class="itemIcon">
+      <p>Upomnienie</p>
+      <div class="jedynka">1</div>
+      <span id="upomnienieCost">20000</span>
+    </div>
+  <div class="down">
+    <p>15 godzin niesurpawiedliwonych</p>
+    <p>JNS + 35</p>
+    <button type="button" name="button" class="upgrade" onclick='buy("upomnienie")'>Kup</button>
+  </div>
+  </div>
+  </div>
+
+  <div class="col-6 col-sm-6 col-md-4 col-lg-2 col-xl-2">
+    <div class="upgrade-wrap">
+    <div class="up">
+      <img src="css/images/kino.png" alt="" class="itemIcon">
+      <p>Kino Elektryk</p>
+      <div class="jedynka">1</div>
+      <span id="kinoCost">40000</span>
+    </div>
+  <div class="down">
+    <p>Legenda glosi, ze za drzwiami nic nie ma</p>
+    <p>JNS + 55</p>
+    <button type="button" name="button" class="upgrade" onclick='buy("kino")'>Kup</button>
+  </div>
+  </div>
+  </div>
+
+    <div class="col-6 col-sm-6 col-md-4 col-lg-2 col-xl-2">
+      <div class="upgrade-wrap">
+      <div class="up">
+        <img src="css/images/erasmus.png" alt="" class="itemIcon">
+        <p>Erasmus</p>
+        <div class="jedynka">1</div>
+        <span id="erasmusCost">120000</span>
+      </div>
+    <div class="down">
+      <p>Wyjazd w celu 'naukowym'</p>
+      <p>JNS + 90</p>
+      <button type="button" name="button" class="upgrade" onclick='buy("erasmus")'>Kup</button>
+    </div>
+    </div>
+    </div>
+
+  <div class="col-6 col-sm-6 col-md-4 col-lg-2 col-xl-2">
+    <div class="upgrade-wrap">
+    <div class="up">
+      <img src="css/images/matura.png" alt="" class="itemIcon">
+      <p>Matura</p>
+      <div class="jedynka">1</div>
+      <span id="maturaCost">300000</span>
+    </div>
+  <div class="down">
+    <p>Nie zostajesz dopuszcony z matmy</p>
+    <p>JNS + 200</p>
+    <button type="button" name="button" class="upgrade" onclick='buy("matura")'>Kup</button>
+  </div>
+  </div>
+  </div>
+
+  <div class="col-6 col-sm-6 col-md-4 col-lg-2 col-xl-2">
+    <div class="upgrade-wrap">
+    <div class="up">
+      <img src="css/images/disco.png" alt="" class="itemIcon">
+      <p>DiscoPolo</p>
+      <div class="jedynka">1</div>
+      <span id="discoCost">800000</span>
+    </div>
+  <div class="down">
+    <p>Robisz hit DiscoPolo z DiscoAdamusem na feacie</p>
+    <p>JNS + 350</p>
+    <button type="button" name="button" class="upgrade" onclick='buy("disco")'>Kup</button>
+  </div>
+  </div>
+  </div>
+
+  <div class="col-6 col-sm-6 col-md-4 col-lg-2 col-xl-2">
+    <div class="upgrade-wrap">
+    <div class="up">
+      <img src="css/images/dyrektor.png" alt="" class="itemIcon">
+      <p>Dyrektor</p>
+      <div class="jedynka">1</div>
+      <span id="dyrektorCost">3000000</span>
+    </div>
+  <div class="down">
+    <p>Zostajesz dyrektorem najlepszego technikum na podlasiu</p>
+    <p>JNS + 550</p>
+    <button type="button" name="button" class="upgrade" onclick='buy("dyrektor")'>Kup</button>
+  </div>
+  </div>
+  </div>
+
+  <div class="col-6 col-sm-6 col-md-4 col-lg-2 col-xl-2">
+    <div class="upgrade-wrap">
+    <div class="up">
+      <img src="css/images/walesa.png" alt="" class="itemIcon">
+      <p>Prezydent</p>
+      <div class="jedynka">1</div>
+      <span id="walesaCost">10000000</span>
+    </div>
+  <div class="down">
+    <p>Idziesz w ślady Lecha Walęsy. Odblokowujesz reformy</p>
+    <p>JNS + 1990</p>
+    <button type="button" name="button" class="upgrade" onclick='buy("walesa")'>Kup</button>
+  </div>
+  </div>
+  </div>
+
+  <div class="col-6 col-sm-6 col-md-4 col-lg-2 col-xl-2">
+    <div class="upgrade-wrap">
+    <div class="up">
+      <img src="css/images/technikum.png" alt="" class="itemIcon">
+      <p>Reforma nr.1</p>
+      <div class="jedynka">1</div>
+      <span id="technikumCost">50000000</span>
+    </div>
+  <div class="down">
+    <p>Od teraz nauka w technikum trwa 5 lat</p>
+    <p>JNS + 5000</p>
+    <button type="button" name="button" class="upgrade" onclick='buy("technikum")'>Kup</button>
+  </div>
+  </div>
+  </div>
+
+
+
+ </div>
+</div>
+</div> <!-- end of content   -->
+  <div class="upgrades__footer"></div>
+
+</div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="app.js" charset="utf-8"></script>
+<script src="progress.js" charset="utf-8"></script>
+<script src="sklep.js" charset="utf-8"></script>
+</html>
