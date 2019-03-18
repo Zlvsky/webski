@@ -154,7 +154,7 @@ h4 {
   font-size: 25px;
 }
 #jps::before {
-  content: "Jednyki na sekunde: "
+  content: "Jedynki na sekunde: "
 }
 #totalscore, #totalscore::before {
   font-size: 20px;
